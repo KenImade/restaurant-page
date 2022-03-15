@@ -50,9 +50,11 @@ function createFirstSection() {
     firstSection.classList.add("first-section");
 
     const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
 
     const heading = document.createElement("h2");
     heading.textContent = "Coffee Shop";
+    heading.classList.add("title");
 
     const paragraph = document.createElement("p");
     paragraph.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis vitae dolor egestas fermentum. Cras tempor diam nunc, id consectetur nulla fringilla euismod. Integer gravida lobortis felis eu pharetra. Phasellus nec eros ac lorem tempor varius in quis tellus. Ut tempor placerat arcu scelerisque interdum. In hac habitasse platea dictumst. Maecenas commodo non arcu a placerat. Nullam in fringilla libero.";
@@ -66,9 +68,10 @@ function createFirstSection() {
 
     const img = new Image();
     img.src = bgImg;
-
-    firstSection.style.backgroundImage = img;
+    img.classList.add("center-fit");
+   
     firstSection.appendChild(cardDiv);
+    firstSection.appendChild(img);
 
     return firstSection;
 };
@@ -93,7 +96,7 @@ function initializeWebsite() {
     const content = document.getElementById("content");
 
     content.appendChild(createHeader());
-    // content.appendChild(createMain());
+    content.appendChild(createMain());
     // content.appendChild(createFooter());
 
 };
