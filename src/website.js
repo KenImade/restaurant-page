@@ -77,14 +77,48 @@ function createFirstSection() {
 };
 
 function createSecondSection() {
-    const title = document.createElement("h4");
+    const secondSection = document.createElement("section");
+    secondSection.classList.add("second-section");
 
-    let headerList = ["01 Friendly Place", "02 FEEL THE COFFEE", ""]
+    const title = document.createElement("h2");
 
+    secondSection.appendChild(title);
+
+    let cardSection = document.createElement("div");
+    cardSection.classList.add("card-section");
+
+    let headerList = ["01 Friendly Place", "02 FEEL THE COFFEE", "03 FULL TASTE"];
+    for (let i=0; i < headerList.length+1; i++) {
+        let card = createCard(headerList[i], i);
+        cardSection.appendChild(card);
+    }
+
+    secondSection.appendChild(title);
+    secondSection.appendChild(cardSection);
+
+    return secondSection;
 };
 
-function createCard() {
+function createCard(title, i) {
+    let images = [];
+    const card = document.createElement("div");
+    card.classList.add("info-card");
+    let cardImage = document.createElement("img");
+    card.classList.add("card-img");
+    let cardTitle = document.createElement("h4");
+    card.classList.add("card-title")
+    let cardText = document.createElement("div");
+    card.classList.add("card-text");
+    
+    cardTitle.textContent = title;
+    cardImage.src = images[i];
+    cardText.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis vitae dolor egestas fermentum. Cras tempor diam nunc, id consectetur nulla fringilla euismod. Integer gravida lobortis felis eu pharetra. Phasellus nec eros ac lorem tempor varius in quis tellus. Ut tempor placerat arcu scelerisque interdum. In hac habitasse platea dictumst. Maecenas commodo non arcu a placerat. Nullam in fringilla libero."
 
+    card.appendChild(cardImage);
+    card.appendChild(cardTitle);
+    card.appendChild(cardText);
+
+    return card;
 }
 
 
