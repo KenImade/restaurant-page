@@ -2,6 +2,12 @@ import bgImg from './assets/bg-img.jpg';
 import cardImgOne from './assets/card-img-one.jpg';
 import cardImgTwo from './assets/card-img-two.jpg';
 import cardImgThree from './assets/card-img-three.jpg';
+import telImg from './assets/telephone-call.png';
+import mailImg from './assets/mail.png';
+import wpImg from './assets/whatsapp.png';
+import fbImg from './assets/facebook.png';
+import twitterImg from './assets/twitter.png';
+import youtubeImg from './assets/youtube.png';
 import './style.css';
 
 function createHeader() {
@@ -130,7 +136,79 @@ function createCard(title, i) {
 
 
 function createFooter() {
+    const footer = document.createElement("footer");
+    const footerLinks = document.createElement("div");
+    footerLinks.classList.add("footer-links");
 
+    const contactLinks = document.createElement("div");
+    const contactHeading = document.createElement("h3");
+    contactHeading.textContent = "Contact";
+    contactLinks.appendChild(contactHeading);
+    contactLinks.classList.add("contact-links");
+
+    const telDiv = document.createElement("div");
+    telDiv.classList.add("contact-div");
+    const phoneImg = document.createElement("img");
+    const telParagraph = document.createElement("p");
+    telParagraph.textContent = "09000000000";
+    phoneImg.src = telImg;
+    telDiv.appendChild(phoneImg);
+    telDiv.appendChild(telParagraph);
+
+    const emailDiv = document.createElement("div");
+    emailDiv.classList.add("contact-div");
+    const emailImg = document.createElement("img");
+    const emailParagraph = document.createElement("p");
+    emailParagraph.textContent = "customercare@goodcoffee.com";
+    emailImg.src = mailImg;
+    emailDiv.appendChild(emailImg);
+    emailDiv.appendChild(emailParagraph);
+
+    const whatsappDiv = document.createElement("div");
+    whatsappDiv.classList.add("contact-div");
+    const whatsappImg = document.createElement("img");
+    const whatsappParagraph = document.createElement("p");
+    whatsappParagraph.textContent = "09000000000";
+    whatsappImg.src = wpImg;
+    whatsappDiv.appendChild(whatsappImg);
+    whatsappDiv.appendChild(whatsappParagraph);
+    
+
+    contactLinks.appendChild(telDiv);
+    contactLinks.appendChild(emailDiv);
+    contactLinks.appendChild(whatsappDiv);
+
+    const aboutUsLinks = document.createElement("div");
+    aboutUsLinks.classList.add("about-div");
+    const aboutUsHeading = document.createElement("h3");
+    const aboutUsText = document.createElement("p");
+    aboutUsHeading.textContent = "About us";
+    aboutUsText.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis vitae dolor egestas fermentum. Cras tempor diam nunc, id consectetur nulla fringilla euismod."
+    aboutUsLinks.appendChild(aboutUsHeading);
+    aboutUsLinks.appendChild(aboutUsText);
+
+    const followUsLinks = document.createElement("div");
+    followUsLinks.classList.add("follow-div");
+    const followUsHeading = document.createElement("h3");
+    followUsHeading.textContent = "Follow Us";
+    followUsLinks.appendChild(followUsHeading);
+    const followImgDiv = document.createElement("div");
+    const faceImg = document.createElement("img");
+    faceImg.src = fbImg;
+    followImgDiv.appendChild(faceImg);
+    const tweetImg = document.createElement("img");
+    tweetImg.src = twitterImg;
+    followImgDiv.appendChild(tweetImg);
+    const youTubeImg = document.createElement("img");
+    youTubeImg.src = youtubeImg;
+    followImgDiv.appendChild(youTubeImg);
+    followUsLinks.appendChild(followImgDiv);
+
+    footer.appendChild(contactLinks);
+    footer.appendChild(aboutUsLinks);
+    footer.appendChild(followUsLinks);
+
+    return footer;
 };
 
 function initializeWebsite() {
@@ -138,8 +216,7 @@ function initializeWebsite() {
 
     content.appendChild(createHeader());
     content.appendChild(createMain());
-    // content.appendChild(createFooter());
-
+    content.appendChild(createFooter());
 };
 
 export default initializeWebsite;
