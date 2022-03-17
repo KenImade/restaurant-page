@@ -1,4 +1,5 @@
 import createHomePage from './home';
+import createMenuPage from './menu';
 
 import telImg from './assets/telephone-call.png';
 import mailImg from './assets/mail.png';
@@ -28,12 +29,16 @@ function createHeader() {
     const menuBtn = document.createElement("button");
     menuBtn.classList.add("btn-nav");
     menuBtn.textContent = "Menu";
-    // menuBtn.onclick(loadMenu());
+    menuBtn.addEventListener("click", () => {
+        loadMenu();
+    });
 
     const contactBtn = document.createElement("button");
     contactBtn.classList.add("btn-nav");
     contactBtn.textContent = "Contact Us";
-    // contactBtn.onclick(loadContact());
+    contactBtn.addEventListener("click", () => {
+        loadContact();
+    });
 
     links.appendChild(homeBtn);
     links.appendChild(menuBtn);
@@ -51,6 +56,15 @@ function loadHome() {
 
     content.appendChild(createHeader());
     content.appendChild(createMain(createHomePage()));
+    content.appendChild(createFooter());
+};
+
+function loadMenu() {
+    const content = document.getElementById("content");
+    content.innerHTML = "";
+
+    content.appendChild(createHeader());
+    content.appendChild(createMain(createMenuPage()));
     content.appendChild(createFooter());
 };
 
