@@ -1,5 +1,6 @@
 import createHomePage from './home';
 import createMenuPage from './menu';
+import createContactPage from './contact';
 
 import telImg from './assets/telephone-call.png';
 import mailImg from './assets/mail.png';
@@ -55,7 +56,7 @@ function loadHome() {
     content.innerHTML = "";
 
     content.appendChild(createHeader());
-    content.appendChild(createMain(createHomePage()));
+    content.appendChild(createHomePage());
     content.appendChild(createFooter());
 };
 
@@ -64,13 +65,17 @@ function loadMenu() {
     content.innerHTML = "";
 
     content.appendChild(createHeader());
-    content.appendChild(createMain(createMenuPage()));
+    content.appendChild(createMenuPage());
     content.appendChild(createFooter());
 };
 
-function createMain(page) {
-    const main = page;
-    return main
+function loadContact() {
+    const content = document.getElementById("content");
+    content.innerHTML = "";
+
+    content.appendChild(createHeader());
+    content.appendChild(createContactPage());
+    content.appendChild(createFooter());
 };
 
 function createFooter() {
@@ -153,7 +158,7 @@ function initializeWebsite() {
     const content = document.getElementById("content");
 
     content.appendChild(createHeader());
-    content.appendChild(createMain(createHomePage()));
+    content.appendChild(createHomePage());
     content.appendChild(createFooter());
 };
 
