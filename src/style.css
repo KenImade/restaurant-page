@@ -86,6 +86,7 @@ header {
 .first-section .card .title {
     font-weight: 600;
     font-size: 38px;
+    color: #2EB086;
 }
 
 .card button {
@@ -100,6 +101,8 @@ header {
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
+    font-family: 'Oleo Script', cursive;
+    letter-spacing: 2px;
 }
 
 .first-section h2.title {
@@ -126,6 +129,7 @@ header {
 .second-section-title {
     font-weight: 800;
     font-size: 32px;
+    color: #DAB88B;
 }
 
 .card-section .info-card {
