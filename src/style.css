@@ -149,63 +149,25 @@ header {
     height: 300px;
 }
 
+/* Footer */
+
 footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-footer .about-div,
-footer .contact-links {
-    display: flex;
     flex-direction: column;
     align-items: center;
+
+    background-color: rgba(0, 0, 0, 1);
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-footer .contact-links .contact-div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-}
-
-footer .contact-links .contact-div img {
-    width: 30px;
-    height: 30px;
-}
-
-footer .about-div {
-    width: 300px;
-}
-
-footer .about-div p {
-    margin: 0;
-}
-
-footer h3 {
+footer .link {
+    text-decoration: none;
     color: #2EB086;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.follow-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.follow-div img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.follow-div div  {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
+    font-size: 16px;
+    
 }
 
 /* MENU Page */
@@ -415,10 +377,11 @@ footer h3 {
 .contact .map {
     width: 100%;
     height: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact .map iframe {
-    width: 100%;
     height: 100%;
 }
 
