@@ -24,7 +24,7 @@ function createMenuList() {
 
     let productImages = [americanoImg, caffeLatteImg, cappuccinoImg, caramelLatteImg, espressoImg, machiatoImg, mochaLatteImg];
     let productName = ['Americano', 'Caffe Latte', 'Cappuccino', 'Caramel Latte', 'Espresso', 'Machiato', 'Mocha Latte'];
-    let productPrice = ['$2.9','$3.0','$3.0','$3.0','$2.9','$2.9','$3.0'];
+    let productPrice = ['$2.99','$3.00','$3.00','$3.00','$2.90','$2.90','$3.00'];
 
     for (let i = 0; i < productImages.length; i++) {
         menuList.appendChild(createCoffeeCard(productImages[i], productName[i], productPrice[i]));
