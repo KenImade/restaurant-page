@@ -52,7 +52,7 @@ function createCoffeeCard(img, name, price) {
     productPrice.classList.add("price");
     productPrice.textContent = price;
     const buyNowLink = document.createElement("a")
-    buyNowLink.textContent = "Buy Now";
+    buyNowLink.textContent = "Order Now";
     buyNowLink.href = "#";
     buyNowLink.classList.add("buy");
 
