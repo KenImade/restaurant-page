@@ -52,7 +52,7 @@ function createAddressDiv() {
     addressDiv.appendChild(addressText);
 
     return addressDiv;
-}
+};
 
 function createEmailDiv() {
     const emailDiv = document.createElement("div");
@@ -75,7 +75,7 @@ function createEmailDiv() {
     emailDiv.appendChild(emailTextTwo);
 
     return emailDiv;
-}
+};
 
 function createPhoneDiv() {
     const phoneDiv = document.createElement("div");
@@ -98,7 +98,9 @@ function createPhoneDiv() {
     phoneDiv.appendChild(phoneTextTwo);
 
     return phoneDiv;
-}
+};
+
+
 
 
 function createContactPage() {
@@ -107,6 +109,7 @@ function createContactPage() {
 
     contact.appendChild(createContactTitle());
     contact.appendChild(createContactInfo());
+
 
     return contact;
 };
