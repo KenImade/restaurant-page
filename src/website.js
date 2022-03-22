@@ -1,13 +1,6 @@
 import createHomePage from './home';
 import createMenuPage from './menu';
 import createContactPage from './contact';
-
-import telImg from './assets/telephone-call.png';
-import mailImg from './assets/mail.png';
-import wpImg from './assets/whatsapp.png';
-import fbImg from './assets/facebook.png';
-import twitterImg from './assets/twitter.png';
-import youtubeImg from './assets/youtube.png';
 import './style.css';
 
 function createHeader() {
@@ -52,30 +45,27 @@ function createHeader() {
 };
 
 function loadHome() {
-    const content = document.getElementById("content");
-    content.innerHTML = "";
+    document.body.innerHTML = "";
 
-    content.appendChild(createHeader());
-    content.appendChild(createHomePage());
-    content.appendChild(createFooter());
+    document.body.appendChild(createHeader());
+    document.body.appendChild(createHomePage());
+    document.body.appendChild(createFooter());
 };
 
 function loadMenu() {
-    const content = document.getElementById("content");
-    content.innerHTML = "";
+    document.body.innerHTML = "";
 
-    content.appendChild(createHeader());
-    content.appendChild(createMenuPage());
-    content.appendChild(createFooter());
+    document.body.appendChild(createHeader());
+    document.body.appendChild(createMenuPage());
+    document.body.appendChild(createFooter());
 };
 
 function loadContact() {
-    const content = document.getElementById("content");
-    content.innerHTML = "";
+    document.body.innerHTML = "";
 
-    content.appendChild(createHeader());
-    content.appendChild(createContactPage());
-    content.appendChild(createFooter());
+    document.body.appendChild(createHeader());
+    document.body.appendChild(createContactPage());
+    document.body.appendChild(createFooter());
 };
 
 function createFooter() {
@@ -89,11 +79,9 @@ function createFooter() {
 };
 
 function initializeWebsite() {
-    const content = document.getElementById("content");
-
-    content.appendChild(createHeader());
-    content.appendChild(createHomePage());
-    content.appendChild(createFooter());
+    document.body.appendChild(createHeader());
+    document.body.appendChild(createHomePage());
+    document.body.appendChild(createFooter());
 };
 
 export default initializeWebsite;
